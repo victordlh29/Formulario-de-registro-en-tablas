@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importacion de Css y Icono de web-page -->
+    <link rel="stylesheet" href="./Style/estilo.css">
+    <link rel="shortCut icon" href="./Img/web-icono.png" class="img/x-icon">
+    <title>Formulario de registro</title>
+    <!-- Importación de libreria boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <br><br><br>
+    <!-- Creacion del formulario -->
+    <center>
+        <div class="container-fluid">
+            <div class="card border-dark m-3" style="max-width: 40rem;">
+                <div class="card-header">Registro</div>
+                <div class="card-body float-center">
+                    <div class="row">
+                        <div class="col-8">
+                            <input id="nombre" class="m-1 float-left" type="text" placeholder="Ingrese nombre">
+                            <input id="apellido" class="m-1 float-left" type="text" placeholder="Ingrese apellido">
+                            <br>
+                            <select id="tdoc" class="m-1 float-left">
+                                <option value="1">Tipo de Documento</option>
+                                <option value="2">Tarjeta de Identidad</option>
+                                <option value="3">Cédula de Ciudadania</option>
+                                <option value="4">Cedula de Extranjeria</option>
+                            </select>
+                            <br>
+                            <input id="documento" class="m-1 float-left" type="number" placeholder="Ingrese # documento">
+                            <input id="ciudad" class="m-1 float-left" type="text" placeholder="Ciudad">
+                            <input id="correo" class="m-1 float-left" type="email" placeholder="Ingrese su correo">
+                            <input id="direccion" class="m-1 float-left" type="text" placeholder="Ingrese dirección">
+                            <input id="telefono" class="m-1 float-left" type="number" placeholder="Ingrese telefono">
+                            <input id="edad" class="m-1 float-left" type="number" placeholder="Edad"><br><br>
+                            <button class="btn btn-outline-success" onclick="registrar()">Registrar</button>
+                            <button class="btn btn-outline-light" onclick="listar()">Listar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Creación de tabla de registro de usuarios -->          
+            <div class="row">
+                <div class="col-md-3 my-2">
+                    <table class="table table-fluid table-hover table-dark">
+                        <thead>
+                            <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Tipo</th>
+                            <th>Documento</th>
+                            <th>Ciudad</th>
+                        </tr>
+                        </thead>
+                        <tbody id="usuarios">
+        
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-3 my-2">
+                    <table class="table table-fluid table-hover table-dark">
+                        <thead>
+                            <tr>
+                                <th>Correo</th>
+                                <th>Direccion</th>
+                                <th>Telefono</th>
+                                <th>Edad</th>
+                            </tr>
+                        </thead>
+                        <tbody id="datos">
+        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+    </center>
+    <script src="p1.js"></script>
+</body>
+
+</html>
